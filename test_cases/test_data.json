@@ -1,0 +1,70 @@
+[
+    {
+        "mpin": "1234",
+        "dob_self": "01-01-1990",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["COMMONLY_USED"]
+    },
+    {
+        "mpin": "0101",
+        "dob_self": "01-01-1990",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["DEMOGRAPHIC_DOB_SELF"]
+    },
+    {
+        "mpin": "1508",
+        "dob_spouse": "15-08-1985",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["DEMOGRAPHIC_DOB_SPOUSE"]
+    },
+    {
+        "mpin": "4578",
+        "expected_strength": "STRONG",
+        "expected_reasons": []
+    },
+    {
+        "mpin": "9999",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["COMMONLY_USED"]
+    },
+    {
+        "mpin": "1985",
+        "dob_spouse": "15-08-1985",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["DEMOGRAPHIC_DOB_SPOUSE"]
+    },
+    {
+        "mpin": "0707",
+        "anniversary": "07-07-2010",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["DEMOGRAPHIC_ANNIVERSARY"]
+    },
+    {
+        "mpin": "123456",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["COMMONLY_USED"]
+    },
+    {
+        "mpin": "150885",
+        "dob_spouse": "15-08-1985",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["DEMOGRAPHIC_DOB_SPOUSE"]
+    },
+    {
+        "mpin": "070710",
+        "anniversary": "07-07-2010",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["DEMOGRAPHIC_ANNIVERSARY"]
+    },
+    {
+        "mpin": "542738",
+        "expected_strength": "STRONG",
+        "expected_reasons": []
+    },
+    {
+        "mpin": "020198",
+        "dob_self": "02-01-1998",
+        "expected_strength": "WEAK",
+        "expected_reasons": ["DEMOGRAPHIC_DOB_SELF"]
+    }
+]
