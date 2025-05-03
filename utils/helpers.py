@@ -1,5 +1,3 @@
-# utils/helpers.py
-
 def generate_mpin_patterns(dob_self, dob_spouse, anniversary):
     """
     Generate all relevant 4‑digit and 6‑digit MPIN patterns
