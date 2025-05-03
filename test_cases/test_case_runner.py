@@ -7,6 +7,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.analyzer_4digit import FourDigitMPINAnalyzer
 from utils.analyzer_6digit import SixDigitMPINAnalyzer
 
+# Known reason categories supported by analyzers
+KNOWN_REASONS = {
+    "COMMONLY_USED",
+    "DEMOGRAPHIC_DOB_SELF",
+    "DEMOGRAPHIC_DOB_SPOUSE",
+    "DEMOGRAPHIC_ANNIVERSARY"
+}
+
 def load_test_data(file_path):
     with open(file_path, 'r') as f:
         return json.load(f)
@@ -19,6 +27,12 @@ def run_test_case(test_case, index):
     expected_strength = test_case["expected_strength"]
     expected_reasons = set(test_case["expected_reasons"])
 
+    # Check for unknown reasons
+    unknown_reasons = expected_reasons - KNOWN_REASONS
+    if unknown_reasons:
+        print(f"Test {index} Warning: Unknown expected reasons: {list(unknown_reasons)}")
+
+    # Initialize appropriate analyzer
     if len(mpin) == 4:
         analyzer = FourDigitMPINAnalyzer(mpin, dob_self, dob_spouse, anniversary)
     elif len(mpin) == 6:
@@ -31,6 +45,7 @@ def run_test_case(test_case, index):
     actual_strength = result["strength"]
     actual_reasons = set(result["reasons"])
 
+    # Evaluate test outcome
     if actual_strength == expected_strength and actual_reasons == expected_reasons:
         print(f" Test {index} Passed")
         return True
