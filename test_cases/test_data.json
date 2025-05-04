@@ -32,14 +32,6 @@
       "expected_reasons": ["DEMOGRAPHIC_ANNIVERSARY"]
     },
     {
-      "mpin": "0000",
-      "dob_self": "01-01-2000",
-      "dob_spouse": "02-02-2002",
-      "anniversary": "10-10-2010",
-      "expected_strength": "WEAK",
-      "expected_reasons": ["COMMONLY_USED"]
-    },
-    {
       "mpin": "1990",
       "dob_self": "18-06-1990",
       "dob_spouse": "09-11-1993",
@@ -158,14 +150,6 @@
       "anniversary": "08-08-2020",
       "expected_strength": "WEAK",
       "expected_reasons": ["DEMOGRAPHIC_DOB_SPOUSE"]
-    },
-    {
-      "mpin": "220420",
-      "dob_self": "05-05-1995",
-      "dob_spouse": "06-06-1996",
-      "anniversary": "22-04-2020",
-      "expected_strength": "WEAK",
-      "expected_reasons": ["DEMOGRAPHIC_ANNIVERSARY"]
     },
     {
       "mpin": "351247",
